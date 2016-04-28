@@ -5,6 +5,7 @@ import {GettingStartedPage} from './pages/getting-started/getting-started';
 import {ListPage} from './pages/list/list';
 import {NewsletterPage} from './pages/newsletter/newsletter';
 import {CalendarPage} from './pages/calendar/calendar';
+import {ColumnTestPage} from './pages/column-test/column-test'
 import {NewsletterProvider} from './providers/newsletter-provider/newsletter-provider';
 import {StringProvider} from './providers/helpers/string-provider';
 
@@ -25,7 +26,8 @@ class MyApp {
       { title: 'Getting Started', component: GettingStartedPage },
       { title: 'List', component: ListPage },
       { title: 'Newsletter', component: NewsletterPage},
-      { title: 'Calendar page', component: CalendarPage}
+      { title: 'Calendar page', component: CalendarPage},
+      { title: 'Columns', component: ColumnTestPage}
     ];
 
   }

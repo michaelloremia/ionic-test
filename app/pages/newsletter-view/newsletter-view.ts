@@ -1,4 +1,5 @@
 import {Page, NavController, NavParams} from 'ionic-angular';
+import {ParallaxHeader} from '../../components/parallax-header/parallax-header';
 
 /*
   Generated class for the NewsletterViewPage page.
@@ -8,35 +9,13 @@ import {Page, NavController, NavParams} from 'ionic-angular';
 */
 @Page({
   templateUrl: 'build/pages/newsletter-view/newsletter-view.html',
+  directives: [ParallaxHeader]
 })
 export class NewsletterViewPage {
+  public data: any;
+  
   constructor(public nav: NavController, public navParams: NavParams) {
-    this.nav = nav;
-    console.log(navParams.get('id'));
-  }
-}
-
-
-@Page({
-  template: "<ion-navbar *navbar> " +
-      "<ion-title>Star</ion-title>" + 
-    "</ion-navbar>" +
-    "<ion-content>Tab 2</ion-content>"})
-class tab {
-  constructor (nav: NavController) {
-    
-  }
-}
-
-
-@Page({
-  template: "<ion-navbar *navbar> " +
-      "<ion-title>Star</ion-title>" + 
-    "</ion-navbar>" +
-    "<ion-content>Tab 2</ion-content>"
-})
-class tab2 {
-  constructor (nav: NavController) {
-    
+    this.data = navParams.data;
+    console.log(this.data);
   }
 }

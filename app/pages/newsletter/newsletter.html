@@ -6,9 +6,14 @@
 -->
 <ion-navbar *navbar>
   <ion-title>Newsletter</ion-title>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
 </ion-navbar>
 <ion-content>
-<ion-list *ngFor="#letter of letters">
-  <div>{{letter.title}}</div>
-</ion-list>
+  <ion-card *ngFor="#letter of newsletters" (click)="gotoNewsletter(letter)">
+    <img [src]="letter.img">
+    <ion-card-header>{{letter.title}}</ion-card-header>
+    <ion-card-content>{{stringHelper.trimParagraphs(letter.content, 50) + '...'}}</ion-card-content>
+  </ion-card>
 </ion-content>

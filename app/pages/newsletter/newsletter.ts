@@ -1,6 +1,7 @@
 import {Page, NavController} from 'ionic-angular';
 import {StringProvider} from '../../providers/helpers/string-provider';
 import {NewsletterProvider} from '../../providers/newsletter-provider/newsletter-provider';
+import {NewsletterViewerPage} from '../../pages/newsletter-viewer/newsletter-viewer';
 
 /*
   Generated class for the NewsletterPage page.
@@ -26,5 +27,9 @@ export class NewsletterPage {
         .then(data => {
           this.newsletters = data.letters;
         });
+  }
+  
+  gotoNewsletter(data) {
+    this.nav.push(NewsletterViewerPage, data);
   }
 }

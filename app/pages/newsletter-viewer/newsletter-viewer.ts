@@ -1,5 +1,5 @@
-import {NavController, Page} from 'ionic-angular';
-import {NewsletterPage} from '../newsletter/newsletter';
+import {NavController, Page, NavParams} from 'ionic-angular';
+import {NewsletterViewPage} from '../newsletter-view/newsletter-view';
 import {ReferencesPage} from '../references/references';
 
 
@@ -7,13 +7,14 @@ import {ReferencesPage} from '../references/references';
   templateUrl: 'build/pages/newsletter-viewer/newsletter-viewer.html'
 })
 export class NewsletterViewerPage {
-  tab1Root: new NewsletterPage;
-  tab2Root: string;
-  
+  tab1Root: any;
+  tab2Root: any;
+  rootParams: any;
 
-  constructor(public nav: NavController) {
+  constructor(public nav: NavController, public navParams: NavParams) {
     // set the root pages for each tab
-    this.tab1Root = NewsletterPage;
+    this.rootParams = navParams.data;
+    this.tab1Root = NewsletterViewPage;
     this.tab2Root = ReferencesPage;
     
   }
