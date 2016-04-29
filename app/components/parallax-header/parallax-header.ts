@@ -11,11 +11,10 @@ import {Directive, ElementRef} from 'angular2/core';
   selector: '[parallax-header]' // Attribute selector
 })
 export class ParallaxHeader {
-  scrollingEl: any;
-  headerEl: any;
+  scrollingEl: Element;
+  headerEl: Element;
   
   constructor(public el: ElementRef) {
-    this.headerEl = 1;
   }
   
   ngOnInit() {

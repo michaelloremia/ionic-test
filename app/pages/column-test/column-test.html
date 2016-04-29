@@ -6,8 +6,18 @@
 -->
 <ion-navbar *navbar>
   <ion-title>columnTest</ion-title>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
 </ion-navbar>
 
-<ion-content padding class="column-test">
-  <ion-pane></ion-pane>
+<ion-content class="column-test">
+  <ion-row>
+    <ion-col width-75 class="col1">a</ion-col>
+    <ion-col class="col2" wrap>b</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="col2" >b</ion-col>
+    <ion-col width-75 class="col1">a</ion-col>
+  </ion-row>
 </ion-content>

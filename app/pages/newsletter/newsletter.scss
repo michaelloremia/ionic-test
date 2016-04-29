@@ -1,3 +1,14 @@
-.newsletter {
 
+@media (min-width: 768px) {
+.newsletter-page{
+    ion-content {
+        text-align: center;
+    }
+    ion-card {
+        width: 30%;
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+    }
+}
 }
