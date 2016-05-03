@@ -1,18 +1,22 @@
 import 'es6-shim';
 import {App, IonicApp, Platform} from 'ionic-angular';
+import {Component} from 'angular2/core';
+import {NgStyle} from 'angular2/common';
 import {StatusBar} from 'ionic-native';
 import {GettingStartedPage} from './pages/getting-started/getting-started';
 import {ListPage} from './pages/list/list';
 import {NewsletterPage} from './pages/newsletter/newsletter';
 import {CalendarPage} from './pages/calendar/calendar';
-import {ColumnTestPage} from './pages/column-test/column-test'
 import {NewsletterProvider} from './providers/newsletter-provider/newsletter-provider';
 import {StringProvider} from './providers/helpers/string-provider';
+import {CardImageHeader} from './components/card-image-header/card-image-header';
+import {TestComponent} from './components/test-component/test-component';
 
 @App({
   templateUrl: 'build/app.html',
   config: {}, // http://ionicframework.com/docs/v2/api/config/Config/
-  providers: [NewsletterProvider, StringProvider]
+  providers: [NewsletterProvider, StringProvider],
+  directives: [CardImageHeader, NgStyle]
 })
 class MyApp {
   rootPage: any = GettingStartedPage;
@@ -26,8 +30,7 @@ class MyApp {
       { title: 'Getting Started', component: GettingStartedPage },
       { title: 'List', component: ListPage },
       { title: 'Newsletter', component: NewsletterPage},
-      { title: 'Calendar page', component: CalendarPage},
-      { title: 'Columns', component: ColumnTestPage}
+      { title: 'Calendar page', component: CalendarPage}
     ];
 
   }

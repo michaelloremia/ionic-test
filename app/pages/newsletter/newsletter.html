@@ -12,8 +12,9 @@
 </ion-navbar>
 <ion-content>
   <ion-card *ngFor="#letter of newsletters" (click)="gotoNewsletter(letter)">
-    <img [src]="letter.img">
+    <card-image-header [img]="letter.img"></card-image-header>
     <ion-card-header>{{letter.title}}</ion-card-header>
     <ion-card-content>{{stringHelper.trimParagraphs(letter.content, 50) + '...'}}</ion-card-content>
   </ion-card>
+  <ion-card></ion-card><ion-card></ion-card>
 </ion-content>

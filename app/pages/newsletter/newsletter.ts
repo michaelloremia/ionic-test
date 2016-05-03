@@ -1,7 +1,10 @@
 import {Page, NavController} from 'ionic-angular';
+import {Component} from 'angular2/core';
+import {NgStyle} from 'angular2/common';
 import {StringProvider} from '../../providers/helpers/string-provider';
 import {NewsletterProvider} from '../../providers/newsletter-provider/newsletter-provider';
 import {NewsletterViewerPage} from '../../pages/newsletter-viewer/newsletter-viewer';
+import {CardImageHeader} from '../../components/card-image-header/card-image-header';
 
 /*
   Generated class for the NewsletterPage page.
@@ -10,16 +13,16 @@ import {NewsletterViewerPage} from '../../pages/newsletter-viewer/newsletter-vie
   Ionic pages and navigation.
 */
 @Page({
-  templateUrl: 'build/pages/newsletter/newsletter.html'
+  templateUrl: 'build/pages/newsletter/newsletter.html',
+  directives: [CardImageHeader]
 })
 export class NewsletterPage {
   public newsletters: any;
+  public style = 'italic';
   
-  constructor(public nav: NavController, public newsletterProvider: NewsletterProvider, public stringHelper: StringProvider) {
-    this.newsletterProvider.load()
-        .then(data => {
-          this.newsletters = data.letters;
-        });
+  constructor(public nav: NavController, public newsletterProvider: NewsletterProvider,
+   public stringHelper: StringProvider) {
+    this.getNewsLetters();
   }
   
   getNewsLetters() {
