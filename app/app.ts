@@ -11,18 +11,20 @@ import {NewsletterProvider} from './providers/newsletter-provider/newsletter-pro
 import {StringProvider} from './providers/helpers/string-provider';
 import {CardImageHeader} from './components/card-image-header/card-image-header';
 import {TestComponent} from './components/test-component/test-component';
+import {Globals} from './providers/globals/globals';
+import * as R from 'ramda';
 
 @App({
   templateUrl: 'build/app.html',
   config: {}, // http://ionicframework.com/docs/v2/api/config/Config/
-  providers: [NewsletterProvider, StringProvider],
+  providers: [NewsletterProvider, StringProvider, Globals],
   directives: [CardImageHeader, NgStyle]
 })
 class MyApp {
   rootPage: any = GettingStartedPage;
   pages: Array<{title: string, component: any}>
 
-  constructor(private app: IonicApp, private platform: Platform) {
+  constructor(private app: IonicApp, private platform: Platform, g: Globals) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation

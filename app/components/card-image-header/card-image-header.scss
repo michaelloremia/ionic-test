@@ -1,5 +1,13 @@
+card-image-header > div {
+    display: none;
+}
+
 @media (min-width: 768px) {
+    card-image-header > img {
+        display: none;
+    }
     card-image-header > div {
+        display: block;
         background-size: cover;
         background-repeat: no-repeat;
         width: 100%;
