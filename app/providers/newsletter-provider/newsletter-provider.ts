@@ -1,6 +1,7 @@
 import {Injectable} from 'angular2/core';
 import {Http} from 'angular2/http';
 import 'rxjs/add/operator/map';
+import 'rxjs/Observable';
 
 /*
   Generated class for the NewsletterProvider provider.
@@ -14,13 +15,12 @@ export class NewsletterProvider {
   dataUrl: string = './data/static_data.json';
 
   constructor(public http: Http) { 
-    console.log(http);
    }
 
-  load() {
+  load(dataName: string) {
     if (this.data) {
       // already loaded data
-      return Promise.resolve(this.data);
+      return Promise.resolve(this.data[dataName]);
     }
 
     // don't have the data yet
@@ -32,11 +32,19 @@ export class NewsletterProvider {
         .map(res => res.json())
         .subscribe(data => {
           // we've got back the raw data, now generate the core schedule data
-          // and save the data for later reference
+          // and save the data 1for later reference
           this.data = data;
-          resolve(this.data);
+          resolve(this.data[dataName]);
         });
     });
+  }
+  
+  loadNewsLetters() {
+    return this.load('letters');
+  }
+  
+  loadContacts() {
+    return this.load('contacts');
   }
 }
 

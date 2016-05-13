@@ -15,4 +15,24 @@
 @import "../pages/newsletter/newsletter";
 
 //components
-@import "../components/card-image-header/card-image-header"
+@import "../components/card-image-header/card-image-header";
+
+//disable hover opacity as the hover state for elements interaction with touch events is bad
+// causes clicked/touched elements in device to have a lingering hover state
+.enable-hover a:hover{
+  opacity: 1;
+}
+
+/**
+*   manual global theme override
+*     should be declare here to override all components
+**/
+.tab-button,
+.tab-button[aria-selected=true] {
+  color: color($colors, light);
+}
+
+.tab-button[aria-selected=true] {
+  opacity: 1;
+}
+

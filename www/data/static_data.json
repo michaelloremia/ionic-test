@@ -74,4 +74,22 @@
     "title": "The Cage", 
     "content": "Lorem ipsum keme keme keme 48 years ma-kyonget bakit ganders chopopo lulu at ang wrangler katol krang-krang nang."
 }
+],
+"contacts": [
+    {
+        "name": "Annie Edison",
+        "displayPicture": "https://s-media-cache-ak0.pinimg.com/236x/73/fb/ec/73fbecc5de5c0fbdf65fda96406eb16b.jpg",
+        "email": "test@yopmail.com",
+        "phone": "0912312552"
+    },{
+        "name": "Jeff Winger",
+        "displayPicture": "http://vignette2.wikia.nocookie.net/community-sitcom/images/5/52/Puppet_Jeff.jpg/revision/latest/top-crop/width/320/height/320?cb=20150104212232",
+        "email": "test@yopmail.com",
+        "phone": "0912312552"
+    },{
+        "name": "Senor Chang BBM",
+        "displayPicture": "https://pbs.twimg.com/profile_images/1373966252/The_Ghostface.jpg",
+        "email": "test@yopmail.com",
+        "phone": "0912312552"
+    }
 ]}

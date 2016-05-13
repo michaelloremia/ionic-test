@@ -33,3 +33,9 @@ $colors: (
   dark:       #222,
   favorite:   #69BB7B
 );
+
+
+$toolbar-background:     color($colors, primary);
+$toolbar-md-button-color:   color($colors, light);
+$toolbar-text-color:     color($colors, light);
+$toolbar-md-text-color:     color($colors, light);

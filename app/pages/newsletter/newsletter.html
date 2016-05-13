@@ -11,10 +11,16 @@
   </button>
 </ion-navbar>
 <ion-content>
-  <ion-card *ngFor="#letter of newsletters" (click)="gotoNewsletter(letter)">
-    <card-image-header [img]="letter.img"></card-image-header>
+  <ion-card *ngFor="#letter of newsletters">
+    <card-image-header [img]="letter.img" (click)="gotoNewsletter(letter)"></card-image-header>
     <ion-card-header>{{letter.title}}</ion-card-header>
     <ion-card-content>{{stringHelper.trimParagraphs(letter.content, 50) + '...'}}</ion-card-content>
+    <ion-item>
+    <button primary clear item-right>
+      <ion-icon name="bookmark"></ion-icon>
+      Bookmark
+    </button>
+    </ion-item>
   </ion-card>
   <ion-card></ion-card><ion-card></ion-card>
 </ion-content>

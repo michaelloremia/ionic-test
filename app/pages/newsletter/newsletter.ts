@@ -26,9 +26,9 @@ export class NewsletterPage {
   }
   
   getNewsLetters() {
-    this.newsletterProvider.load()
+    this.newsletterProvider.loadNewsLetters()
         .then(data => {
-          this.newsletters = data.letters;
+          this.newsletters = data;
         });
   }
   

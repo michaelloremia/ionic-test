@@ -213,4 +213,19 @@
         }
         ]
 }
+],
+"contacts": [
+    {
+        "name": "Annie Edison",
+        "displayPicture": "http://assets1.ignimgs.com/2013/12/24/annie1280jpg-e9764d_1280w.jpg",
+        "email": ""
+    },{
+        "name": "Jeff Winger",
+        "displayPicture": "http://vignette2.wikia.nocookie.net/community-sitcom/images/5/52/Puppet_Jeff.jpg/revision/latest/top-crop/width/320/height/320?cb=20150104212232",
+        "email": ""
+    },{
+        "name": "Senor Chang BBM",
+        "displayPicture": "https://pbs.twimg.com/profile_images/1373966252/The_Ghostface.jpg",
+        "email": ""
+    }
 ]}

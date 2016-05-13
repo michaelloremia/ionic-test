@@ -16,6 +16,5 @@ export class NewsletterViewPage {
   
   constructor(public nav: NavController, public navParams: NavParams) {
     this.data = navParams.data;
-    console.log(this.data);
   }
 }
